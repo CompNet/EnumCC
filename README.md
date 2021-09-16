@@ -66,7 +66,7 @@ Compile and get the jar file for *RNSCC*: `ant -v -buildfile build-rns.xml compi
 
 Compile and get the jar file for *EnumCC*: `ant -v -buildfile build.xml compile jar`.
 
-Run  first *ExCC*, then *EnumCC* through the [Sosocc](https://github.com/CompNet/Sosocc) repository. See the instructions of that repository for more details.
+Download the [Sosocc](https://github.com/CompNet/Sosocc) repository and put these jar files into the `lib` folder. Then, run first *ExCC* and then *EnumCC(3)*. See the instructions of the *Sosocc* repository for more details.
 
 
 
@@ -74,8 +74,7 @@ Example command:
 
 ```
 ant -v -buildfile build.xml compile jar
-ant -v -buildfile build.xml -DinFile="in/example.G" -DoutDir="out/example" 
-	 	-DmaxNbEdit=3 -DinitMembershipFilePath="out/example/membership0.txt" -DLPFilePath="strengthedModelAfterRootRelaxation.lp" -DJAR_filepath_RNSCC="RNSCC.jar" -DnbThread=4 -Dtilim=-1 -DsolLim=5000 run
+ant -v -buildfile build.xml -DinFile="in/example.G" -DoutDir="out/example" -DmaxNbEdit=3 -DinitMembershipFilePath="out/example/membership0.txt" -DLPFilePath="strengthedModelAfterRootRelaxation.lp" -DJAR_filepath_RNSCC="RNSCC.jar" -DnbThread=4 -Dtilim=-1 -DsolLim=5000 run
 ```
 
 
